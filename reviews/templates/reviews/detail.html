@@ -2,8 +2,8 @@
 {% load django_bootstrap5 %}
 {% block content %}
 
-<h1>{{ review.title }}</h1>
-<p>{{ review.pk }}번 글 | {{ review.created_at }} | {{ review.updated_at }}</p>
+<h1 class="mt-3 mb-3 fw-bold text-success">{{ review.title }}</h1>
+<p>No.{{ review.pk }} | 작성시간: {{ review.created_at }} | 마지막 업데이트: {{ review.updated_at }}</p>
 <hr>
 <p>{{ review.content }} </p>
 <p><a href="{% url 'reviews:update' review.pk %}">수정하기</a></p>

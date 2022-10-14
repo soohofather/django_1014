@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block content %}
+<h1>글 수정하기</h1>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ review_form.as_p }}
+
+  <input type="submit" value="수정">
+</form>
+{% endblock content %}

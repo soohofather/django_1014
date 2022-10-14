@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block content %}
+
+<h1>{{ review.title }}</h1>
+<p>{{ review.pk }}번 글 | {{ review.created_at }} | {{ review.updated_at }}</p>
+<hr>
+<p>{{ review.content }} </p>
+<p><a href="{% url 'reviews:update' review.pk %}">수정하기</a></p>
+<p><a href="{% url 'reviews:delete' review.pk %}">삭제하기</a></p>
+<p><a href="{% url 'reviews:index' %}">홈으로</a></p>
+
+{% endblock content %}

@@ -43,7 +43,7 @@ def login(request):
             if request.GET.get('next'):
                 return redirect(request.GET.get('next'))
             else:
-                return redirect('accounts:index')
+                return redirect('reviews:index')
     else:
         form = AuthenticationForm()
     context = {

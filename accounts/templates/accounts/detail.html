@@ -8,12 +8,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">PK</th>
+      <th scope="col">회원번호</th>
       <th scope="col">ID</th>
       <th scope="col">성</th>
       <th scope="col">이름</th>
       <th scope="col">E-mail</th>
-      <th scope="col"></th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -24,13 +23,12 @@
       <td>{{ user.last_name }}</td>
       <td>{{ user.first_name }}</td>
       <td>{{ user.email }}</td>
-      <td><a href="{% url 'accounts:update' user.pk %}">수정</a></td>
-      <td><a href="{% url 'accounts:delete' user.pk %}">삭제</a></td>
+      <td><a class="btn btn-primary btn-sm" href="{% url 'accounts:update' user.pk %}">수정</a></td>
     </tr>
   </tbody>
 </table>
 <div class="text-end">
-  <a href="{% url 'accounts:index' %}"><p class="fs-6">뒤로가기</p></a>
+  <a href="{% url 'reviews:index' %}"><p class="fs-6">뒤로가기</p></a>
 </div>
 
 {% endblock content %}

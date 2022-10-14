@@ -22,7 +22,9 @@ def signup(request):
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            # 회원가입하면 로그인 유지 되도록 하는 코드
+            auth_login(request, user)
             return redirect("accounts:index")
     else:
         form = CustomUserCreationForm()

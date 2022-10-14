@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% load django_bootstrap5 %}
 
 {% block content %}
@@ -6,7 +7,7 @@
 
 <form action="{% url 'reviews:create' %}" method="POST">
   {% csrf_token %}
-  {{ review_form.as_p }}
+  {% bootstrap_form review_form %}
 
   <input type="submit" value="리뷰쓰기">
 </form>

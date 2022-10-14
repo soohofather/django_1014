@@ -6,7 +6,6 @@ class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        # fields = ['title', 'content', 'grade']
         fields = '__all__'
         labels = {
             'title' : '제목',

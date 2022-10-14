@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
-{% load django_bootstrap5 %}
 {% block content %}
 <h1>리뷰쓰기</h1>
 
+{% load django_bootstrap5 %}
+{% bootstrap_css %} 
+{% bootstrap_javascript %}
+
 <form action="{% url 'reviews:create' %}" method="POST">
   {% csrf_token %}
-  {{ review_form.as_p }}
+  {% bootstrap_form review_form %}
 
   <input type="submit" value="리뷰쓰기">
 </form>

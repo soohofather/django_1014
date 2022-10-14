@@ -8,3 +8,8 @@ class ReviewForm(forms.ModelForm):
         model = Review
         # fields = ['title', 'content', 'grade']
         fields = '__all__'
+        labels = {
+            'title' : '제목',
+            'content' : '내용',
+            'grade' : '점수',
+        }

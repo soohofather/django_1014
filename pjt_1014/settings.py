@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'accounts',
     'django_extensions',
     'django_bootstrap5',
-    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

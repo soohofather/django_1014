@@ -15,19 +15,13 @@
     <tr>
       <th scope="col">PK</th>
       <th scope="col">ID</th>
-      <th scope="col">성</th>
-      <th scope="col">이름</th>
-      <th scope="col">E-mail</th>
     </tr>
   </thead>
   <tbody>
     {% for i in user %}
-    <tr>
+    <tr onclick='location.href="{{ i.pk }}"' style='cursor: pointer;'>
       <th scope="row">{{ i.pk }}</th>
       <td>{{ i.username }}</td>
-      <td>{{ i.last_name }}</td>
-      <td>{{ i.first_name }}</td>
-      <td>{{ i.email }}</td>
     </tr>
     {% endfor %}
   </tbody>
